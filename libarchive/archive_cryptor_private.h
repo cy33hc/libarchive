@@ -123,7 +123,7 @@ typedef struct {
 	unsigned	encr_pos;
 } archive_crypto_ctx;
 
-#elif defined(HAVE_LIBCRYPTO)
+#elif defined(HAVE_LIBCRYPTO) || defined(__PS4__)
 #include "archive_openssl_evp_private.h"
 #define AES_BLOCK_SIZE	16
 #define AES_MAX_KEY_SIZE 32

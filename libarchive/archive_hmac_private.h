@@ -73,7 +73,7 @@ typedef mbedtls_md_context_t archive_hmac_sha1_ctx;
 
 typedef	struct hmac_sha1_ctx archive_hmac_sha1_ctx;
 
-#elif defined(HAVE_LIBCRYPTO)
+#elif defined(HAVE_LIBCRYPTO) || defined(__PS4__)
 #include <openssl/opensslv.h>
 #include <openssl/hmac.h>
 #if OPENSSL_VERSION_NUMBER >= 0x30000000L

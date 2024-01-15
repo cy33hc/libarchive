@@ -28,6 +28,9 @@
 #include "archive_platform.h"
 __FBSDID("$FreeBSD$");
 
+#undef HAVE_FCHFLAGS
+#undef HAVE_CHFLAGS
+
 #if !defined(_WIN32) || defined(__CYGWIN__)
 
 #ifdef HAVE_SYS_TYPES_H

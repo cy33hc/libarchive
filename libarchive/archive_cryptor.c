@@ -125,7 +125,7 @@ pbkdf2_sha1(const char *pw, size_t pw_len, const uint8_t *salt,
 	return 0;
 }
 
-#elif defined(HAVE_LIBCRYPTO) && defined(HAVE_PKCS5_PBKDF2_HMAC_SHA1)
+#elif (defined(HAVE_LIBCRYPTO) && defined(HAVE_PKCS5_PBKDF2_HMAC_SHA1)) || defined(__PS4__)
 
 static int
 pbkdf2_sha1(const char *pw, size_t pw_len, const uint8_t *salt,
@@ -382,7 +382,7 @@ aes_ctr_release(archive_crypto_ctx *ctx)
 	return 0;
 }
 
-#elif defined(HAVE_LIBCRYPTO)
+#elif defined(HAVE_LIBCRYPTO) || defined(__PS4__)
 
 static int
 aes_ctr_init(archive_crypto_ctx *ctx, const uint8_t *key, size_t key_len)

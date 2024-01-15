@@ -225,7 +225,7 @@ __hmac_sha1_cleanup(archive_hmac_sha1_ctx *ctx)
 	memset(ctx, 0, sizeof(*ctx));
 }
 
-#elif defined(HAVE_LIBCRYPTO)
+#elif defined(HAVE_LIBCRYPTO) || defined(__PS4__)
 
 static int
 __hmac_sha1_init(archive_hmac_sha1_ctx *ctx, const uint8_t *key, size_t key_len)
