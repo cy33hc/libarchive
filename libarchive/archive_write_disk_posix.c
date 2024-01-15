@@ -26,7 +26,6 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$FreeBSD$");
 
 #undef HAVE_FCHFLAGS
 #undef HAVE_CHFLAGS
