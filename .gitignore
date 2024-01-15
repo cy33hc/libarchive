@@ -64,6 +64,8 @@ libarchive/libarchive.a
 libarchive/libarchive.so
 libarchive/libarchive.so.*
 
+.vscode
+build-ps4
 .DS_Store
 
 /*_test
